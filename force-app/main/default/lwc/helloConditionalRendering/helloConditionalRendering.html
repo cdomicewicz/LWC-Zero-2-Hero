@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Conditional rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="brand" label="Show Data" title="Show Data" onclick={handleClick} class="slds-var-m-left_x-small">
+            </lightning-button>
+            <lightning-button variant="brand" label="Hide Data" title="Hide Data" onclick={handleClickHide} class="slds-var-m-left_x-small">
+            </lightning-button>
+            <lightning-input type="text" label="Please type secret word (Hello)" onkeyup={changeHandler}></lightning-input>
+            <template lwc:if={checkPassword}>
+                <div>
+                    You've typed correct password!
+                </div>
+            </template>
+            <template lwc:if={isVisible}>
+                <div>
+                    Welcome to Zero to Hero series!
+                </div>
+            </template>
+            <template lwc:else>
+                <div>
+                    Name of the course is hidden!
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

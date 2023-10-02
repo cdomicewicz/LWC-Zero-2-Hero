@@ -1,0 +1,30 @@
+<template>
+    <div>Hello World!</div>
+    <div>{user.name}</div>
+    <div>{user.surname}</div>
+    <lightning-card  title="Two way data binding">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" onkeyup={changeHandler} label="Enter course name"></lightning-input>
+            <div>{fullName} is a good course about {title}.</div>
+        </div>
+    </lightning-card>
+    <lightning-card  title="@track properties">
+        <div class="slds-var-m-around_medium">
+            <lightning-input type="text" onkeyup={trackHandler} label="Enter city name"></lightning-input>
+            <div>{address.city} is my city.</div>
+        </div>
+    </lightning-card>
+    <lightning-card  title="Getter Demo">
+        <div class="slds-var-m-around_medium">
+            <div>First user is {firstUser}.</div>
+            <div>The result of multiplification of {num1} and {num2} is {multiply}.</div>
+        </div>
+    </lightning-card>
+    <lightning-card  title="Getter Demo">
+        <div class="slds-var-m-around_medium">
+            <template lwc:if={condition1}> Condition 1 is true </template>
+            <template lwc:elseif={condition2}> Condition 2 is true </template>
+            <template lwc:else> Condition 1 and 2 are false.</template>
+        </div>
+    </lightning-card>
+</template>

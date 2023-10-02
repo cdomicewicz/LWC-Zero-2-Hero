@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="User Permission Demo">
+        <template lwc:if={hasViewAllDataAvailable}>
+            <p>You have a user permission <strong>"View All Data"!</strong></p>
+        </template>
+        <template lwc:else>
+            <p>You don't have required permission!</p>
+        </template>
+    </lightning-card>
+    
+</template>

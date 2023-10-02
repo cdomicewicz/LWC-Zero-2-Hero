@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Lightning record edit form">
+        <lightning-record-edit-form
+        object-api-name={contactObject}
+        record-id="0035t000015Oel6AAC">
+            <lightning-input-field field-name={fields.accountField}></lightning-input-field>
+            <lightning-input-field field-name={fields.nameField}></lightning-input-field>
+            <lightning-input-field field-name={fields.titleField}></lightning-input-field>
+            <lightning-input-field field-name={fields.phoneField}></lightning-input-field>
+            <label class="slds-p-left_x-small">Enter you email:</label>
+            <lightning-input-field variant="label-hidden" field-name={fields.emailField}></lightning-input-field>
+            <lightning-button class="slds-m-around_x-small" label="Cancel" onclick={handleReset}></lightning-button>
+            <lightning-button class="slds-m-around_x-small" variant="brand" type="submit" label="Save"></lightning-button>
+
+        </lightning-record-edit-form>
+        <lightning-messages></lightning-messages>
+    </lightning-card>
+</template>
